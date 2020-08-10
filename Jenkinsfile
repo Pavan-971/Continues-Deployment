@@ -1,11 +1,12 @@
 pipeline{
     agent any
     stages{
-        stage("Getting code from repo")
+        stage("Code Deployment")
         {
             steps{
                 
-                sh 'odeployment'
+                sh 'rm -rf /tmp/*'
+                sh 'scp -r /tmp root@AnsibleServer:/tmp'
         
             }
         }
