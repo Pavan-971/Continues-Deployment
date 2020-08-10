@@ -5,6 +5,7 @@ pipeline{
         {
             steps{
                 sh 'cd /home/ansible'
+                sh 'pwd'
                 sh 'ansible-playbook /home/ansible/playbook.yml'
                 
         
