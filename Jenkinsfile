@@ -6,7 +6,7 @@ pipeline{
             steps{
                 
                 sh 'ansible-playbook /home/ansible/playbook.yml'
-                sh 'ok'
+                
         
             }
         }
