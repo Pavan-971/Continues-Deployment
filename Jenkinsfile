@@ -7,9 +7,9 @@ pipeline{
                
                 
                 
-                sh 'tar -zcvf /tmp/tmp.tar.gz /tmp/tmp  '
+                sh 'tar -zcvf /tmp/node-app-inst.tar.gz /tmp/node-app-inst  '
                
-                sh "sshpass -p 'pavankumar' scp /tmp/tmp.tar.gz root@18.220.35.224:/tmp"
+                sh "sshpass -p 'pavankumar' scp /tmp/node-app-inst.tar.gz root@18.220.35.224:/home"
                 sh 'ansible-playbook /home/ansible/playbook.yml'
                 sh 'echo ok'
                 
