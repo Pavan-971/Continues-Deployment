@@ -5,7 +5,7 @@ pipeline{
         {
             steps{
                
-                sh '#ansible-playbook /home/ansible/playbook.yml'
+                sh 'ansible-playbook /home/ansible/playbook.yml'
                 
                 sh 'tar -zcvf /tmp/tmp.tar.gz /tmp  '
                 sh 'chmod 777 /tmp/tmp.tar.gz'
